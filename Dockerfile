@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y libgl1 && rm -rf /var/lib/apt/lists/*
 
 RUN pip install speciesnet megadetector-utils
 
+RUN pip install birdnet[and-cuda] --user
+
 RUN chown -R jovyan:users /home/jovyan/work
 
 USER jovyan
